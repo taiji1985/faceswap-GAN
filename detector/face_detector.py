@@ -10,18 +10,18 @@ class VideoInfo:
     def __init__(self):
         self.frame = 0
 def yang_resize(x0, y1, x1, y0):
-  xc = (x0+x1)//2
-  yc = (y0+y1)//2
-  w = x1 -x0
-  h = y1 - y0
-  x0 = xc - w//2
-  if x0 < 0:
-    x0 = 0
-  x1 = x0+256
-  y0 = yc - h//2
-  if y0 < 0:
-    y0  = 0
-  y1 = y0+256
+      xc = (x0+x1)//2
+      yc = (y0+y1)//2
+      w = x1 -x0
+      h = y1 - y0
+      x0 = xc - w//2
+      if x0 < 0:
+        x0 = 0
+      x1 = x0+256
+      y0 = yc - h//2
+      if y0 < 0:
+        y0  = 0
+      y1 = y0+256
   return (x0,y1,x1,y0)
 def process_image(input_img, info, detector, save_interval, save_path): 
     minsize = 30 # minimum size of face
